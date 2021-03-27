@@ -1,0 +1,48 @@
+.header
+    &-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &-right
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &-social
+        margin-right: 145px
+        &__img
+            margin-right: 93px
+
+    &-burger
+        width: 65px
+        height: 18px
+        position: relative
+        &_span
+            display: block
+            background: #9A9692
+            width: 100%
+            max-width: 49px
+            height: 2px
+            position: absolute
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+
+        &::before
+            content: ''
+            width: 100%
+            height: 2px
+            background: #705C4B
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+        &::after
+            content: ''
+            width: 100%
+            max-width: 37px
+            height: 2px
+            background: #E0DDDA
+            display: block
+            position: absolute
+            bottom: 0
+            right: 0
