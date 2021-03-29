@@ -1,0 +1,59 @@
+.feedback
+    background: linear-gradient(360deg, rgba(85, 64, 53, 0.5) 42.2%, rgba(85, 64, 53, 0) 100%)
+    box-shadow: inset 0 190px 70px 0 #2a2929, inset 0 -93px 70px 0 #2a2929
+    padding-top: 183px
+    padding-bottom: 114px
+    position: relative
+    overflow: hidden
+    &::before
+        content: '72ru'
+        display: block
+        position: absolute
+        bottom: -20%
+        left: 50%
+        transform: translateX(-50%)
+        opacity: 0.1
+        letter-spacing: 0.06em
+        font:
+            size: 690px
+            weight: 700
+        color: $white-color
+        z-index: -1
+
+    &-block
+        display: flex
+        justify-content: space-between
+    &-item
+        padding-right: 96px
+        padding-left: 14px
+        color: $gray-opacity-color
+        flex-basis: 50%
+        position: relative
+        &_1
+            padding-top: 145px
+            align-self: flex-end
+
+        &_2
+            align-self: flex-start
+            padding-bottom: 124px
+        &::after
+            content: ''
+            width: 4px
+            height: 100%
+            display: inline-block
+            background: $border-color
+            box-shadow: -7px -7px 25px rgba(189, 168, 150, 0.5), 7px 7px 20px rgba(0, 0, 0, 0.5), inset 6px 6px 6px rgba(42, 41, 41, 0.5)
+            position: absolute
+            top: 0
+            right: 0
+        &:last-of-type
+            border: none
+            box-shadow: none
+            &::after
+                content: ''
+                display: none
+        font:
+            size: 40px
+            weight: 400
+        &__text
+            margin-bottom: 65px

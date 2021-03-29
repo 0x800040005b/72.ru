@@ -1,0 +1,48 @@
+.design
+    margin-bottom: 153px
+    &-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        &_top
+            margin-bottom: 188px
+
+    &__title
+        position: relative
+        left: 35%
+        top: 80px
+        margin-bottom: 133px
+        display: table
+        font:
+            size: 300px
+            weight: 700
+        &::before
+            content: '72ru'
+            letter-spacing: 0.07em
+            top: -65px
+            left: -48px
+            position: absolute
+            font:
+                size: 450px
+            display: block
+            color: transparent
+            -webkit-text-stroke: 2px $white-color
+    &_label
+        font-size: 45px
+        display: block
+        margin-left: auto
+        text-transform: uppercase
+    &__link
+        display: block
+        color: $white-color
+        padding: 27px 65px
+        margin-left: auto
+        border: 1px solid $white-color
+        border-radius: 10px
+        box-shadow: 0 0 60px 0 rgba($white-color, 0.2),inset -4px -4px 40px 3px $background-body-color
+        background: rgba(189, 168, 150, 0.2)
+        max-width: 511px
+        font:
+            size: 30px
+            weight: 600
