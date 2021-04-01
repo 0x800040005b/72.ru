@@ -1,22 +1,36 @@
 .service
-    display: none
     &__title
         margin-bottom: 60px
+    &_big__title
+        position: relative
+        top: 40px
+        color: transparent
+        -webkit-text-stroke: 1px $white-color
+        font:
+            size: 600px
+            weight: 700
+
     &-block
         display: flex
-        margin-left: -61px
-        margin-right: -61px
+        flex-wrap: wrap
     &-column
         padding: 0 61px
         flex: 1 1 286px
         display: flex
         flex-direction: column
-
+        &__img
+            border-radius: 10px
+        &:last-child
+            padding-right: 0
+    &-img__block
+        position: relative
+        box-shadow: 91px 94px 17px -93px $white-color
+        margin: 0 auto
     &-item
         &__link
             position: absolute
-            bottom: 5%
-            right: 3%
+            bottom: 2%
+            right: 2%
             color: $brown-dark-color
             font:
                 size: 19px

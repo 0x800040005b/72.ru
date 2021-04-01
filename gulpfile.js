@@ -21,14 +21,13 @@ gulp.task('server', function() {
     browserSync.init({
         server: 'src/',
         online: true,
-
     });
     gulp.watch('src/sass/**/*.sass').on('change', gulp.series('sass'));
     gulp.watch("src/*.html").on('change', browserSync.reload);
     gulp.watch("src/js/**/*.js").on('change', browserSync.reload);
 
 });
-gulp.task('moveFiles', function(done){
+gulp.task('moveFiles', function(done) {
     /* Image files */
     gulp.src('src/img/**/*.*')
         .pipe(imgMin([
@@ -66,7 +65,7 @@ gulp.task('moveFiles', function(done){
         }))
         .pipe(concat('main.min.js'))
         .pipe(gulp.dest('dist/js'))
-   done();
+    done();
 });
 
 gulp.task('default', gulp.series('server'));

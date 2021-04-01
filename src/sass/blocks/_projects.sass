@@ -1,13 +1,16 @@
 .projects
-    padding-top: 34px 498px
+    padding-top: 34px
+    padding-bottom: 24px
     &__title
         margin-bottom: 75px
     &-block
         display: flex
+        flex-wrap: wrap
         margin: 0 68px
+        margin-bottom: 90px
     &-column
         padding: 0 60px
-        flex: 1 1 50%
+        flex: 1 1 33%
     &-item
         &__img
             margin-bottom: 100px
@@ -21,3 +24,72 @@
             font:
                 size: 25px
                 weight: 400
+.callback
+    position: relative
+    padding-top: 86px
+    &::before
+        content: '72ru'
+        position: absolute
+        top: -32%
+        left: -4%
+        z-index: -1
+        line-height: 731px
+        letter-spacing: 0.07em
+        display: block
+        color: transparent
+        -webkit-text-stroke: 1px $white-color
+        font:
+            size: 600px
+            weight: 700
+    &-block
+        display: flex
+        justify-content: space-between
+        &__link
+            display: block
+            align-self: flex-end
+        &__img
+            width: 100px
+            height: 100px
+            border-radius: 10px
+            background: rgba(189, 168, 150, 0.2)
+            backdrop-filter: blur(100px)
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 2px solid rgba(189, 168, 150, 0.7)
+            box-shadow: 0 0 27px 19px rgba(189, 168, 150, 0.2)
+
+    &-form
+        min-width: 892px
+        margin: 0 auto
+        text-align: center
+        background-color: darken($form-color, 7%)
+        border-radius: 66px
+        padding: 60px 96px
+        &__input
+            border: none
+            display: block
+            margin: 0 auto
+            width: 100%
+            border-radius: 10px
+            margin-bottom: 45px
+            padding: 19px 0 19px 25px
+            &::placeholder
+                color: $form-input-color
+                line-height: 27px
+                letter-spacing: 0.07em
+                font:
+                    size: 22px
+                    weight: 700
+        &__button
+            margin: 0 auto
+            margin-bottom: 30px
+            color: $white-color
+            font:
+                size: 35px
+                weight: 700
+            padding: 22px 87px
+            max-width: 511px
+            max-height: 78px
+            background: rgba(189, 168, 150, 0.2)
+            backdrop-filter: blur(10px)
