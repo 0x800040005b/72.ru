@@ -1,1 +1,70 @@
+@media (max-width: 1600px)
+  .menu
+    &-list
+      overflow-y: auto
+      &__link
+        font-size: 35px
+  .design
+    &-block
+      padding: 0 20px
+      justify-content: space-between
+      &__img
+        flex-basis: 33%
+    &-text
+      flex-basis: 33%
+    &__title
+      top: 0
+      left: 0
+      margin-bottom: 40px
+      &::before
+        left: -5%
+        top: 0
+        font-size: 303px
+    &__link
+      margin-bottom: 30px
+      margin-left: 0
+@media (max-width: 1200px)
+  .design
+    &-block
+      &__img
+        flex-basis: 45%
+      & .bullets
+        align-self: center
+        margin-left: 10px
+        & .bullet
+          width: 20px
+          height: 20px
+    &__title
+      font:
+        size: 200px
+      &::before
+        font-size: 174px
+        top: 12%
+        left: 3%
+    &__link
+      padding: 17px 38px
+      font-size: 20px
+      max-width: 400px
+      text-align: center
 
+
+    &_label
+      font-size: 30px
+@media (max-width: 992px)
+  .header
+    &-menu
+      width: 100%
+      height: 100%
+      padding: 10px 30px
+      justify-content: space-between
+      border-radius: 2px
+    &-social
+      margin-right: 55px
+      &__link
+        margin-right: 50px
+  .menu
+    &-list
+      width: 100%
+      overflow-y: scroll
+      &__link
+        font-size: 32px

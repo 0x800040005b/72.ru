@@ -18,35 +18,32 @@
 
     /* Menu */
     &-menu
-        display: none
+        opacity: 0
+        visibility: hidden
         position: fixed
         top: 0
-        right: 0
+        right: -100%
         z-index: 1
-        align-self: flex-end
         background: rgba(85, 64, 53, 1)
-        transition: all 0.5s
+        transition: all 0.5s ease
         border-radius: 45px
         padding: 76px 94px 76px 167px
         &.active
             display: flex
-        & .menu-list
-            list-style: none
-            &__link
-                color: #fff
-                font:
-                    size: 42px
-                    weight: 600
-            &__item
-                margin-bottom: 30px
-                line-height: 51px
-
+            align-self: flex-end
+            opacity: 1
+            visibility: visible
+            right: 0
     &-burger
         width: 65px
         height: 18px
         position: relative
+        transition: all 0.5s ease-in
+        opacity: 1
+        visibility: visible
         &.active
-            display: none
+            opacity: 0
+            visibility: hidden
         &_span
             display: block
             background: #9A9692
@@ -77,3 +74,15 @@
             position: absolute
             bottom: 0
             right: 0
+
+.menu-list
+    list-style: none
+    &__link
+        color: #fff
+        font:
+            size: 42px
+            weight: 600
+    &__item
+        margin-bottom: 30px
+        line-height: 51px
+

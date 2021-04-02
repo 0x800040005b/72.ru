@@ -383,33 +383,32 @@ a {
       .header-social__link:last-child {
         margin-right: 0; }
   .header-menu {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     z-index: 1;
-    align-self: flex-end;
     background: #554035;
-    transition: all 0.5s;
+    transition: all 0.5s ease;
     border-radius: 45px;
     padding: 76px 94px 76px 167px; }
     .header-menu.active {
-      display: flex; }
-    .header-menu .menu-list {
-      list-style: none; }
-      .header-menu .menu-list__link {
-        color: #fff;
-        font-size: 42px;
-        font-weight: 600; }
-      .header-menu .menu-list__item {
-        margin-bottom: 30px;
-        line-height: 51px; }
+      display: flex;
+      align-self: flex-end;
+      opacity: 1;
+      visibility: visible;
+      right: 0; }
   .header-burger {
     width: 65px;
     height: 18px;
-    position: relative; }
+    position: relative;
+    transition: all 0.5s ease-in;
+    opacity: 1;
+    visibility: visible; }
     .header-burger.active {
-      display: none; }
+      opacity: 0;
+      visibility: hidden; }
     .header-burger_span {
       display: block;
       background: #9A9692;
@@ -440,6 +439,16 @@ a {
       bottom: 0;
       right: 0; }
 
+.menu-list {
+  list-style: none; }
+  .menu-list__link {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 600; }
+  .menu-list__item {
+    margin-bottom: 30px;
+    line-height: 51px; }
+
 .design {
   margin-bottom: 153px; }
   .design-block {
@@ -462,8 +471,8 @@ a {
     .design__title::before {
       content: '72ru';
       letter-spacing: 0.07em;
-      top: -65px;
-      left: -48px;
+      top: -16%;
+      left: -8%;
       position: absolute;
       font-size: 450px;
       display: block;
@@ -817,9 +826,14 @@ a {
     max-width: 309px; }
 
 .popup {
-  display: none; }
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  margin-top: -100%; }
   .popup.active {
-    display: block;
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
@@ -828,10 +842,15 @@ a {
     left: 0;
     z-index: 2; }
   .popup-modal {
-    position: absolute;
-    top: 50%;
-    left: 0;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    transition: all 0.8s ease-in;
     max-width: 880px; }
+    .popup-modal.active {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(0deg); }
   .popup-form {
     position: relative;
     display: flex;
@@ -842,14 +861,86 @@ a {
       margin-bottom: 20px;
       align-self: flex-end; }
 
+@media (max-width: 1600px) {
+  .menu-list {
+    overflow-y: auto; }
+    .menu-list__link {
+      font-size: 35px; }
+  .design-block {
+    padding: 0 20px;
+    justify-content: space-between; }
+    .design-block__img {
+      flex-basis: 33%; }
+  .design-text {
+    flex-basis: 33%; }
+  .design__title {
+    top: 0;
+    left: 0;
+    margin-bottom: 40px; }
+    .design__title::before {
+      left: -5%;
+      top: 0;
+      font-size: 303px; }
+  .design__link {
+    margin-bottom: 30px;
+    margin-left: 0; } }
+
+@media (max-width: 1200px) {
+  .design-block__img {
+    flex-basis: 45%; }
+  .design-block .bullets {
+    align-self: center;
+    margin-left: 10px; }
+    .design-block .bullets .bullet {
+      width: 20px;
+      height: 20px; }
+  .design__title {
+    font-size: 200px; }
+    .design__title::before {
+      font-size: 174px;
+      top: 12%;
+      left: 3%; }
+  .design__link {
+    padding: 17px 38px;
+    font-size: 20px;
+    max-width: 400px;
+    text-align: center; }
+  .design_label {
+    font-size: 30px; } }
+
+@media (max-width: 992px) {
+  .header-menu {
+    width: 100%;
+    height: 100%;
+    padding: 10px 30px;
+    justify-content: space-between;
+    border-radius: 2px; }
+  .header-social {
+    margin-right: 55px; }
+    .header-social__link {
+      margin-right: 50px; }
+  .menu-list {
+    width: 100%;
+    overflow-y: scroll; }
+    .menu-list__link {
+      font-size: 32px; } }
+
 body {
   position: relative; }
 
 .bullets {
-  align-self: flex-start; }
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column; }
 
-section {
+section, header {
   overflow: hidden; }
+
+section, .map, footer {
+  display: none; }
+
+.design {
+  display: block; }
 
 .bullet {
   display: block;
@@ -858,6 +949,10 @@ section {
   height: 26px;
   border-radius: 50%;
   background: #705C4B; }
+  .bullet__link {
+    display: block; }
+  .bullet.active {
+    background: #554035; }
 
 .lock {
   overflow: hidden; }

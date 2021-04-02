@@ -20,14 +20,26 @@
                 <div class="header-right">
                     <div class="header-social">
                         <a href="https://instagram.com" target="_blank" class="header-social__link">
-                            <img src="img/header/icons/instagram.svg" target="_blank" alt="instagram" class="header-social__img">
+                            <img src="img/header/icons/instagram.svg" alt="instagram" class="header-social__img">
                         </a>
-                        <a href="https://vk.com" class="header-social__link">
-                            <img src="img/header/icons/vk.svg" alt="vk" class="header-social__img">
+                        <a href="https://vk.com" target="_blank" class="header-social__link">
+                            <img src="img/header/icons/vk.svg" alt="vk"  class="header-social__img">
                         </a>
                     </div>
                     <!-- /.header-social -->
-                    <div class="header-burger">
+                    <div id="menu" class="header-menu">
+                        <ul class="menu-list">
+                            <li class="menu-list__item"><a href="#main" class="menu-list__link">Главная</a></li>
+                            <li class="menu-list__item"><a href="#service" class="menu-list__link">Наши услуги</a></li>
+                            <li class="menu-list__item"><a href="#works" class="menu-list__link">Как мы работаем?</a></li>
+                            <li class="menu-list__item"><a href="#projects" class="menu-list__link">Наши проекты</a></li>
+                        </ul>
+                        <!-- /.menu-list -->
+                        <span id="menu-close" class="menu-close"><img src="img/header/menu-close.svg" alt="menu-close"></span>
+
+                    </div>
+                    <!-- /.header-menu -->
+                    <div id="burger" class="header-burger">
                         <span class="header-burger_span"></span>
                     </div>
                     <!-- /.header-burger -->
@@ -39,14 +51,14 @@
         <!-- /.container -->
     </header>
     <!-- /.header -->
-    <section class="design">
+    <section id="design" class="design">
         <div class="container">
             <div class="design-block design-block_top">
                 <div class="design-text">
                     <h1 class="title design__title">72ru
                         <span class="design_label">Дизайн интерьера</span>
                     </h1>
-                    <a href="#" class="design__link">Заказать консультацию</a>
+                    <a href="#" id="order_consultation" class="design__link">Заказать консультацию</a>
 
                 </div>
                 <!-- /.design-text -->
@@ -55,7 +67,6 @@
                 </div>
                 <!-- /.design-block__img design-img -->
                 <div class="bullets">
-                    <span class="bullet"></span>
                 </div>
                 <!-- /.bullets -->
 
@@ -350,7 +361,7 @@
                 <span id="popup-close" class="popup-form_close"><img src="img/header/menu-close.svg " alt=" " class="menu-close__img "></span>
                 <input type="tel " class="callback-form__input callback-form__tel " placeholder="Ваш телефон ">
                 <input type="text " class="callback-form__input callback-form__name " placeholder="Ваше имя ">
-                <button type="submit " id="callback-form__button " class="design__link callback-form__button ">Заказать звонок</button>
+                <button type="submit " id="" class="design__link callback-form__button ">Заказать звонок</button>
 
             </form>
 

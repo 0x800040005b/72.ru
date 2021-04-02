@@ -16,10 +16,17 @@
 body
     position: relative
 .bullets
+    display: flex
     align-self: flex-start
+    flex-direction: column
 
-section
+section, header
     overflow: hidden
+
+section, .map, footer
+  display: none
+.design
+    display: block
 
 .bullet
     display: block
@@ -28,6 +35,10 @@ section
     height: 26px
     border-radius: 50%
     background: $brown-light-color
+    &__link
+        display: block
+    &.active
+        background: $form-color
 
 .lock
     overflow: hidden
