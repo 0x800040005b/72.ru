@@ -8,14 +8,45 @@
         justify-content: space-between
         align-items: center
     &-social
+        display: flex
+        justify-content: space-between
         margin-right: 145px
-        &__img
+        &__link
             margin-right: 93px
+            &:last-child
+                margin-right: 0
+
+    /* Menu */
+    &-menu
+        display: none
+        position: fixed
+        top: 0
+        right: 0
+        z-index: 1
+        align-self: flex-end
+        background: rgba(85, 64, 53, 1)
+        transition: all 0.5s
+        border-radius: 45px
+        padding: 76px 94px 76px 167px
+        &.active
+            display: flex
+        & .menu-list
+            list-style: none
+            &__link
+                color: #fff
+                font:
+                    size: 42px
+                    weight: 600
+            &__item
+                margin-bottom: 30px
+                line-height: 51px
 
     &-burger
         width: 65px
         height: 18px
         position: relative
+        &.active
+            display: none
         &_span
             display: block
             background: #9A9692

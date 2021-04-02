@@ -1,6 +1,7 @@
 @import colors
 @import fonts/Montserrat.scss
 @import reset
+
 @import blocks/header
 @import blocks/design
 @import blocks/feedback
@@ -9,12 +10,15 @@
 @import blocks/projects
 @import blocks/map
 @import blocks/footer
+@import blocks/modal
 @import media
 
+body
+    position: relative
 .bullets
     align-self: flex-start
 
-section, header
+section
     overflow: hidden
 
 .bullet
@@ -24,3 +28,6 @@ section, header
     height: 26px
     border-radius: 50%
     background: $brown-light-color
+
+.lock
+    overflow: hidden
