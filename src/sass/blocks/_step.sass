@@ -1,59 +1,12 @@
 .step
-    padding-bottom: 211px
-    top: -250px
     position: relative
+
+
+
+    padding-bottom: 211px
     background: linear-gradient(180deg, rgba(85, 64, 53, 0.37) 0%, rgba(85, 64, 53, 0) 100%)
     &__title
         margin-bottom: 260px
-    &-block
-        display: flex
-        justify-content: center
-        &__bullets
-            justify-content: flex-end
-
-    &-subblock
-        position: relative
-        &__column
-            position: absolute
-            display: inline-block
-            &_4,&_2,&_1,&_6,&_8,&_9
-                .step-item__text
-                    margin-bottom: 30px
-            &_1
-                top: -14%
-                left: 2%
-
-            &_2
-                top: -14%
-                left: 44%
-            &_3
-                right: -2%
-                top: 10%
-                .step-item__number
-                    margin-left: 10px
-            &_4
-                top: 19%
-                left: 42%
-            &_5
-
-                top: 44%
-                left: -3%
-                .step-item__number
-                    margin-left: 10px
-            &_6
-                bottom: 29%
-                left: 43%
-            &_7
-                right: -2%
-                bottom: 14%
-                .step-item__number
-                    margin-left: 10px
-            &_8
-                left: 44%
-                bottom: -4%
-            &_9
-                left: 2%
-                bottom: -4%
     &-item
         display: flex
         flex-direction: column-reverse
@@ -73,8 +26,61 @@
                 weight: 600
         &__text
             color: $text-color
+            margin-bottom: 30px
             font:
                 size: 25px
                 weight: 400
+    &-block
+        display: flex
+        justify-content: space-around
+        & .bullets
+            margin-left: 30px
+
+    &-subblock
+        position: relative
+        &__card
+            display: none
+        &__column
+            position: absolute
+            display: inline-block
+            &_1
+                top: -14%
+                left: 2%
+
+            &_2
+                top: -14%
+                left: 44%
+            &_3
+                right: -2%
+                top: 11%
+                .step-item__number
+                    margin-left: 10px
+            &_4
+                top: 20%
+                left: 42%
+            &_5
+
+                top: 44%
+                left: -1%
+                .step-item__number
+                    margin-left: 10px
+            &_6
+                bottom: 29%
+                left: 43%
+            &_7
+                right: -2%
+                bottom: 11%
+                .step-item__number
+                    margin-left: 10px
+            &_8
+                left: 44%
+                bottom: -5%
+            &_9
+                left: 2%
+                bottom: -3%
+    &__img
+        margin-left: 20px
 .inline
     flex-direction: row
+    align-items: center
+    vertical-align: middle

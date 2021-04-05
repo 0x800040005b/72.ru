@@ -11,6 +11,8 @@
     &-column
         padding: 0 60px
         flex: 1 1 33%
+    &__img
+        border-radius: 40px
     &-item
         &__img
             margin-bottom: 100px
@@ -43,7 +45,7 @@
             weight: 700
     &-block
         display: flex
-        justify-content: space-between
+        justify-content: center
         &__link
             display: block
             align-self: flex-end
@@ -58,38 +60,41 @@
             align-items: center
             border: 2px solid rgba(189, 168, 150, 0.7)
             box-shadow: 0 0 27px 19px rgba(189, 168, 150, 0.2)
-
     &-form
-        min-width: 892px
-        margin: 0 auto
-        text-align: center
-        background-color: darken($form-color, 7%)
-        border-radius: 66px
-        padding: 60px 96px
+        display: flex
+        flex-direction: column
+        justify-content: center
         &__input
             border: none
-            display: block
-            margin: 0 auto
-            width: 100%
+            background: $border-color
+            outline: none
             border-radius: 10px
             margin-bottom: 45px
             padding: 19px 0 19px 25px
+            max-width: 700px
+            &:last-child
+                margin-bottom: 30px
             &::placeholder
                 color: $form-input-color
-                line-height: 27px
-                letter-spacing: 0.07em
+                text-transform: uppercase
                 font:
                     size: 22px
                     weight: 700
         &__button
+            width: 100%
             margin: 0 auto
-            margin-bottom: 30px
             color: $white-color
+            letter-spacing: 0.07em
             font:
+                weight: 600
                 size: 35px
-                weight: 700
-            padding: 22px 87px
-            max-width: 511px
-            max-height: 78px
-            background: rgba(189, 168, 150, 0.2)
-            backdrop-filter: blur(10px)
+
+.form-wrapper
+    width: 100%
+    max-width: 892px
+    margin-right: 202px
+    background: rgba(85, 64, 53, 0.3)
+    padding: 63px 181px 84px 11px
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.25)
+    backdrop-filter: blur(30px)
+    border-radius: 66px

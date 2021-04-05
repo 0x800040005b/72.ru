@@ -11,7 +11,7 @@
 @import blocks/map
 @import blocks/footer
 @import blocks/modal
-@import media
+
 
 body
     position: relative
@@ -22,23 +22,21 @@ body
 
 section, header
     overflow: hidden
+.container
 
-section, .map, footer
-  display: none
-.design
-    display: block
 
-.bullet
+
+
+.bullet__link
     display: block
-    margin-bottom: 30px
     width: 26px
     height: 26px
+    margin-bottom: 20px
     border-radius: 50%
     background: $brown-light-color
-    &__link
-        display: block
     &.active
         background: $form-color
 
 .lock
     overflow: hidden
+@import media
