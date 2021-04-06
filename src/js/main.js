@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var bulletContainer = document.querySelectorAll('.bullets');
     var sections = document.querySelectorAll('section');
     var buttonBack = document.querySelector('.callback-block__link');
+    var stepSubblockColumn = document.querySelectorAll('.step-subblock__column');
 
     renderBullet();
 
@@ -106,6 +107,21 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
         });
+    }
+    if (stepSubblockColumn != null) {
+        stepSubblockColumn.forEach(function(currentBlock, currentIndex, stepSubblockColumn) {
+            currentBlock.addEventListener('mouseover', function(event) {
+                let description = currentBlock.querySelector('.step-item__description');
+                description.classList.add('active');
+            });
+            currentBlock.addEventListener('mouseout', function(event) {
+                let description = currentBlock.querySelector('.step-item__description');
+                description.classList.remove('active');
+            });
+
+        });
+
+
     }
 
     window.addEventListener('scroll', function(event) {
