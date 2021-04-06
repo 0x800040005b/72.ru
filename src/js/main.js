@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var popup = document.querySelector('#popup');
     var popupModal = document.querySelector('#popup-modal');
     var isScroll = false;
-    var firstSection = null;
 
     var orderConsultation = document.querySelector('#order_consultation');
 
@@ -14,11 +13,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var popupClose = document.querySelector('#popup-close');
     var bulletContainer = document.querySelectorAll('.bullets');
     var sections = document.querySelectorAll('section');
-    firstSection = sections[0];
+    var buttonBack = document.querySelector('.callback-block__link');
 
     renderBullet();
-    let bullets = firstSection.querySelectorAll('.bullet__link')
-    bullets[0].classList.add('active');
 
 
 
@@ -99,10 +96,21 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     }
+    if (buttonBack != null) {
+        buttonBack.addEventListener('click', function(event) {
+            event.stopImmediatePropagation();
+            event.preventDefault();
+            scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
+
+        });
+    }
 
     window.addEventListener('scroll', function(event) {
         sections.forEach(function(currentSection, indexSection, sections) {
-            if (getCoord(currentSection).top <= 120 && getCoord(currentSection).bottom >= 0 || window.pageYOffset == 0) {
+            if (getCoord(currentSection).top <= 200 && getCoord(currentSection).bottom >= 0 || window.pageYOffset == 0) {
                 isScroll = true;
                 scrollBySection(currentSection, isScroll);
             } else {
