@@ -15,8 +15,20 @@ document.addEventListener("DOMContentLoaded", function() {
     var sections = document.querySelectorAll('section');
     var buttonBack = document.querySelector('.callback-block__link');
     var stepSubblockColumn = document.querySelectorAll('.step-subblock__column');
+    var firstSection = null;
 
     renderBullet();
+    if (sections != null && sections.length > 0) {
+        firstSection = sections.item(0);
+        let bullets = firstSection.querySelectorAll('.bullet__link');
+        bullets.forEach(function(currentBullet, currentIndex, bullets) {
+            if (currentBullet.getAttribute('href') == "#" + firstSection.id) {
+                currentBullet.classList.add('active');
+            }
+
+        });
+    }
+
 
 
 
