@@ -34,6 +34,9 @@
       flex-wrap: wrap
       flex: 1 1 calc(20% - 20px)
       margin-right: 20px
+  .step
+    &::before
+      font-size: 470px
 
 @media (max-width: 1200px)
   .bullets .bullet, .bullet__link
@@ -98,10 +101,14 @@
 
     &-column
       padding: 0
-      flex-basis:  15%
+      flex-basis: 15%
       margin-right: 20px
       &:last-child
         margin-right: 0
+  .step
+    &::before
+      font-size: 300px
+      top: -20%
 
 @media (max-width: 1024px)
   .step
@@ -138,9 +145,6 @@
     &__text
       font-size: 15px
 
-
-
-
 @media (max-width: 992px)
   .header
     &-menu
@@ -171,8 +175,8 @@
 
   .step
     &-subblock__column
-        &_2, &_1
-          top: -16%
+      &_2, &_1
+        top: -16%
         &_3, &_7
           right: -4%
         &_4
@@ -211,6 +215,7 @@
   .bullets
     display: none
   .service
+    margin-bottom: 200px
     &-block
       flex-direction: column
       align-items: center
@@ -219,8 +224,13 @@
       font-size: 200px
       top: 0
       text-align: center
+    &-column
+      margin-right: 0
   .step
     padding-bottom: 0
+    &::before
+      font-size: 185px
+      top: -11%
     &__title
       margin-bottom: 150px
     &-block
@@ -255,7 +265,7 @@
   .projects
     &__img
       display: block
-      margin: 0 auto  
+      margin: 0 auto
     &-block
       flex-direction: column
       margin: 0
@@ -272,6 +282,9 @@
         font-size: 20px
   .callback
     margin-top: 150px
+    &::before
+      top: -10%
+      font-size: 220px
     &-block
       flex-direction: column
       &__img
@@ -279,7 +292,6 @@
     &-form
       margin-right: 0
       justify-content: flex-start
-
       &__input
         max-width: 100%
         &::placeholder
@@ -299,8 +311,6 @@
         flex-direction: column
     &-column
       margin-bottom: 30px
-
-
 
 @media (max-width: 540px)
   .header
@@ -347,10 +357,10 @@
     &-list
       &__link
         font-size: 25px
-  .service
-    &_big__title
-      font-size: 100px
   .step
+    &::before
+      font-size: 150px
+      top: -7%
     &__title
       margin-bottom: 80px
     &-block
@@ -396,6 +406,10 @@
     &__link
       padding: 15px 20px
       font-size: 15px
+  .step
+    &::before
+      font-size: 115px
+      top: -5%
 
   .feedback
     padding-top: 50px

@@ -1,10 +1,21 @@
 .step
     position: relative
-
-
-
     padding-bottom: 211px
     background: linear-gradient(180deg, rgba(85, 64, 53, 0.37) 0%, rgba(85, 64, 53, 0) 100%)
+    &::before
+        content: '72ru'
+        position: absolute
+        z-index: 2
+        left: 50%
+        top: -30%
+        transform: translateX(-50%)
+        //display: none
+        text-align: center
+        color: transparent
+        -webkit-text-stroke: 1px $white-color
+        font:
+            size: 600px
+            weight: 700
     &__title
         margin-bottom: 260px
     &-item

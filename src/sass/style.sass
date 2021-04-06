@@ -12,20 +12,19 @@
 @import blocks/footer
 @import blocks/modal
 
-
 body
     position: relative
 .bullets
     display: flex
     align-self: flex-start
     flex-direction: column
+.bullet__link
+    transition: all 0.8s
+    &.active
+        transition: all 0.8s
 
 section, header
-    overflow: hidden
-.container
-
-
-
+    // overflow: hidden
 
 .bullet__link
     display: block
