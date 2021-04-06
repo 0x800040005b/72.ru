@@ -65,6 +65,11 @@ gulp.task('moveFiles', function(done) {
         }))
         .pipe(concat('main.min.js'))
         .pipe(gulp.dest('dist/js'))
+
+    /* fonts */
+
+    gulp.src('src/fonts/**/*.*')
+        .pipe(gulp.dest('dist/fonts'))
     done();
 });
 
